@@ -41,7 +41,7 @@ Make sure you have the following installed:
 git clone https://github.com/valentinkiryanski/REST-CRUD-TASK-MANAGER-API.git
 cd REST-CRUD-TASK-MANAGER-API
 
-2. 🛠️ Set Up the Database
+2. 🛠️ Set Up the Database,
 Log in to MySQL and run the following SQL:
 
 CREATE DATABASE task_manager;
