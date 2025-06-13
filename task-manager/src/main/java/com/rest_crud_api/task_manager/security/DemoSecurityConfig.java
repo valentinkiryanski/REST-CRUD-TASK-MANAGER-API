@@ -43,7 +43,7 @@ public class DemoSecurityConfig {
         http
             .authorizeHttpRequests(configurer ->
                 configurer
-                    .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").authenticated()
+                    .requestMatchers("/swagger-ui/**", "/v3/api-docs/**").hasAnyRole("EMPLOYEE", "MANAGER", "ADMIN")
                     .requestMatchers(HttpMethod.GET, "/api/tasks/**").hasAnyRole("EMPLOYEE", "MANAGER", "ADMIN")
                     .requestMatchers(HttpMethod.POST, "/api/tasks").hasAnyRole("MANAGER", "ADMIN")
                     .requestMatchers(HttpMethod.PUT, "/api/tasks").hasAnyRole("MANAGER", "ADMIN")
